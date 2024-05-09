@@ -210,6 +210,7 @@ async function main (argv) {
   }
 
   pkg.type = 'module'
+  pkg.scripts = {}
   pkg.scripts['init-project'] = `ssc init${isSocket05orGreater ? ' --config' : ''}`
   pkg.scripts.start = 'ssc build -r -o'
   pkg.scripts.build = 'ssc build -o'
